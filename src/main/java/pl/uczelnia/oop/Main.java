@@ -1,5 +1,8 @@
 package main.java.pl.uczelnia.oop;
 
+import main.java.pl.uczelnia.oop.figura.Figura;
+import main.java.pl.uczelnia.oop.figura.Kolo;
+import main.java.pl.uczelnia.oop.figura.Prostokat;
 import main.java.pl.uczelnia.oop.ksiazki.Ksiazka;
 import main.java.pl.uczelnia.oop.pracownicy.Pracownik;
 
@@ -35,6 +38,20 @@ public class Main {
                 s+=p.getPensja();
             }
             System.out.println((s/ (double)pracownicy.length));
+        }
+        {
+            System.out.println("Figury");
+            Figura[] figury = new Figura[4];
+            figury[0] = new Kolo(6);
+            figury[1] = new Kolo(3);
+            figury[2] = new Prostokat(6,6);
+            figury[3] = new Prostokat(6,8);
+            double suma = 0;
+            for(Figura f : figury){
+                System.out.println("Pole: " + f.obliczPole());
+                suma += f.obliczPole();
+            }
+            System.out.println("Suma pól: "+ suma);
         }
     }
 }
