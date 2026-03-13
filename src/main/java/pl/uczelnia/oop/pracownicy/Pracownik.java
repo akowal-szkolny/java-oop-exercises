@@ -4,6 +4,12 @@ public class Pracownik {
     private String imie,nazwisko;
     private int pensja;
 
+    public Pracownik(String imie, String nazwisko, int pensja) {
+        this.imie = imie;
+        this.nazwisko = nazwisko;
+        this.pensja = pensja;
+    }
+
     public String getNazwisko() {
         return nazwisko;
     }
@@ -27,5 +33,13 @@ public class Pracownik {
     public void setPensja(int pensja) {
         this.pensja = pensja;
         if(this.pensja<0) this.pensja = 0;
+    }
+
+    public String toString() {
+        return "Pracownik{" +
+                "imie='" + imie + '\'' +
+                ", nazwisko='" + nazwisko + '\'' +
+                ", pensja=" + pensja +
+                '}';
     }
 }
